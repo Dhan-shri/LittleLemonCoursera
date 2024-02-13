@@ -12,11 +12,8 @@ import androidx.compose.ui.unit.sp
 fun SettingScreen() {
     Box (
         modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
     ) {
-        Text(
-            text = "Setting Screen",
-            fontSize = 48.sp
-        )
+        // Scrollable GridLayout
+        ScrollableGalleryScreen()
     }
 }

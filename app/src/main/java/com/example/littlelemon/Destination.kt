@@ -41,10 +41,10 @@ object Menu : BottomNavDestination {
     override val contentDescription: String = "Menu"
 }
 
-object Location : BottomNavDestination {
-    override val route: String = "location"
+object LazyLayout : BottomNavDestination {
+    override val route: String = "lazyLayout"
     override val icon: ImageVector = Icons.Filled.LocationOn
-    override val contentDescription: String = "Location"
+    override val contentDescription: String = "Lazy"
 }
 object Setting : BottomNavDestination {
     override val route: String = "setting"

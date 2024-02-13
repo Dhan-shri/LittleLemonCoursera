@@ -46,7 +46,7 @@ fun MyApp(){
         Box(
             modifier = Modifier.padding(it)
         ) {
-            NavHost(navController = navController, startDestination = HomeMain.route){
+            NavHost(navController = navController, startDestination = Home.route){
                 composable(HomeMain.route){
                     MainBottomScreen()
                 }
@@ -59,6 +59,10 @@ fun MyApp(){
                 composable(Setting.route){
                     SettingScreen()
                 }
+                composable(LazyLayout.route){
+                    LazyLayoutScreen()
+                }
+
             }
         }
     }
@@ -70,7 +74,8 @@ fun MyBottomNavigation(navController : NavController){
     val navItems = listOf<BottomNavDestination>(
         Home,
         Menu,
-        Setting
+        Setting,
+        LazyLayout
     )
     val selectedIndex = rememberSaveable {
         mutableStateOf(0)
@@ -113,9 +118,11 @@ fun MyNavigation() {
         composable(Setting.route) {
             SettingScreen()
         }
-
         composable(HomeMain.route) {
             MainBottomScreen()
+        }
+        composable(LazyLayout.route) {
+            LazyLayoutScreen()
         }
 
     }
