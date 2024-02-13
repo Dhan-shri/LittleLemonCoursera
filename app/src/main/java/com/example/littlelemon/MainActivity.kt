@@ -62,6 +62,9 @@ fun MyApp(){
                 composable(LazyLayout.route){
                     LazyLayoutScreen()
                 }
+                composable(Theme.route){
+                    ThemeLayout()
+                }
 
             }
         }
@@ -75,7 +78,8 @@ fun MyBottomNavigation(navController : NavController){
         Home,
         Menu,
         Setting,
-        LazyLayout
+        LazyLayout,
+        Theme
     )
     val selectedIndex = rememberSaveable {
         mutableStateOf(0)
